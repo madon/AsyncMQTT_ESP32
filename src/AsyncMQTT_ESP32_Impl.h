@@ -749,7 +749,7 @@ void AsyncMqttClient::_handleQueue()
       (void)realSent;
       _client.send();
       _lastClientActivity = millis();
-      _lastPingRequestTime = 0;
+      //_lastPingRequestTime = 0;
 
 #if ASYNC_TCP_SSL_ENABLED
       AMQTT_LOGINFO3("_handleQueue: snd, packetType #", PacketTypeName[_head->packetType()], ", tls: realSent =", realSent);
